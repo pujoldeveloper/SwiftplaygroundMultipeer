@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		297E5ECC2BEBA6F700BF8FE2 /* SwiftplaygroundMultipeerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5ECB2BEBA6F700BF8FE2 /* SwiftplaygroundMultipeerApp.swift */; };
+		297E5ECE2BEBA6F700BF8FE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5ECD2BEBA6F700BF8FE2 /* ContentView.swift */; };
+		297E5ED02BEBA6FA00BF8FE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297E5ECF2BEBA6FA00BF8FE2 /* Assets.xcassets */; };
+		297E5ED42BEBA6FA00BF8FE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297E5ED32BEBA6FA00BF8FE2 /* Preview Assets.xcassets */; };
+		297E5EE12BEBA73200BF8FE2 /* MultipeerConnectionDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EDC2BEBA73200BF8FE2 /* MultipeerConnectionDataTransformer.swift */; };
+		297E5EE22BEBA73200BF8FE2 /* MultipeerConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EDD2BEBA73200BF8FE2 /* MultipeerConnectionDelegate.swift */; };
+		297E5EE32BEBA73200BF8FE2 /* MultipeerConnectionRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EDE2BEBA73200BF8FE2 /* MultipeerConnectionRole.swift */; };
+		297E5EE42BEBA73200BF8FE2 /* MultipeerConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EDF2BEBA73200BF8FE2 /* MultipeerConnectionManager.swift */; };
+		297E5EE52BEBA73200BF8FE2 /* MutlipeerConnectionConnectionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EE02BEBA73200BF8FE2 /* MutlipeerConnectionConnectionValidator.swift */; };
+		297E5EE72BEBA77300BF8FE2 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EE62BEBA77300BF8FE2 /* LogManager.swift */; };
+		297E5EE92BEBA78900BF8FE2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EE82BEBA78900BF8FE2 /* String+Extension.swift */; };
+		297E5EEB2BEBA89700BF8FE2 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EEA2BEBA89700BF8FE2 /* ContentViewController.swift */; };
+		297E5EEE2BEBA96700BF8FE2 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EED2BEBA96700BF8FE2 /* LogView.swift */; };
+		297E5EF12BEC64BC00BF8FE2 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EF02BEC64BC00BF8FE2 /* Image+Extension.swift */; };
+		297E5EF32BEC67AE00BF8FE2 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EF22BEC67AE00BF8FE2 /* Data+Extension.swift */; };
+		297E5EF52BEE612C00BF8FE2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EF42BEE612C00BF8FE2 /* SettingsView.swift */; };
+		297E5EFD2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EFC2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests.swift */; };
+		297E5F052BEE7FC500BF8FE2 /* MultipeerConnectionDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F042BEE7FC500BF8FE2 /* MultipeerConnectionDelegateMock.swift */; };
+		297E5F062BEE7FE800BF8FE2 /* MultipeerConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EDD2BEBA73200BF8FE2 /* MultipeerConnectionDelegate.swift */; };
+		297E5F092BEE81E700BF8FE2 /* MultipeerConnectionAckableDelegate_ActualSend_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F082BEE81E700BF8FE2 /* MultipeerConnectionAckableDelegate_ActualSend_Test.swift */; };
+		297E5F0A2BEE862B00BF8FE2 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EE62BEBA77300BF8FE2 /* LogManager.swift */; };
+		297E5F0B2BEE863000BF8FE2 /* MultipeerConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EDF2BEBA73200BF8FE2 /* MultipeerConnectionManager.swift */; };
+		297E5F0C2BEE864000BF8FE2 /* MultipeerConnectionRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EDE2BEBA73200BF8FE2 /* MultipeerConnectionRole.swift */; };
+		297E5F0D2BEE864900BF8FE2 /* MultipeerConnectionDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EDC2BEBA73200BF8FE2 /* MultipeerConnectionDataTransformer.swift */; };
+		297E5F0E2BEE865400BF8FE2 /* MutlipeerConnectionConnectionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EE02BEBA73200BF8FE2 /* MutlipeerConnectionConnectionValidator.swift */; };
+		297E5F0F2BEE86C900BF8FE2 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EF22BEC67AE00BF8FE2 /* Data+Extension.swift */; };
+		297E5F102BEE86D300BF8FE2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EE82BEBA78900BF8FE2 /* String+Extension.swift */; };
+		297E5F142BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F132BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift */; };
+		297E5F152BEFAAB800BF8FE2 /* MultipeerConnectionAckableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F132BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift */; };
+		297E5F172BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F162BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift */; };
+		297E5F182BEFAAD000BF8FE2 /* MultipeerConnectionSplitableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F162BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift */; };
+		297E5F1A2BF0D9C300BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F192BF0D9C200BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift */; };
+		297E5F1E2BF0E17100BF8FE2 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F1D2BF0E17100BF8FE2 /* URL+Extension.swift */; };
+		297E5F202BF0E9BE00BF8FE2 /* LocalFileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F1F2BF0E9BE00BF8FE2 /* LocalFileHandler.swift */; };
+		297E5F222BF243A900BF8FE2 /* ProgressCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F212BF243A800BF8FE2 /* ProgressCircularView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		297E5EFE2BEE7F4700BF8FE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 297E5EC02BEBA6F700BF8FE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 297E5EC72BEBA6F700BF8FE2;
+			remoteInfo = SwiftplaygroundMultipeer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		297E5EC82BEBA6F700BF8FE2 /* SwiftplaygroundMultipeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftplaygroundMultipeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		297E5ECB2BEBA6F700BF8FE2 /* SwiftplaygroundMultipeerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftplaygroundMultipeerApp.swift; sourceTree = "<group>"; };
+		297E5ECD2BEBA6F700BF8FE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		297E5ECF2BEBA6FA00BF8FE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		297E5ED12BEBA6FA00BF8FE2 /* SwiftplaygroundMultipeer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftplaygroundMultipeer.entitlements; sourceTree = "<group>"; };
+		297E5ED32BEBA6FA00BF8FE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		297E5EDC2BEBA73200BF8FE2 /* MultipeerConnectionDataTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionDataTransformer.swift; sourceTree = "<group>"; };
+		297E5EDD2BEBA73200BF8FE2 /* MultipeerConnectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionDelegate.swift; sourceTree = "<group>"; };
+		297E5EDE2BEBA73200BF8FE2 /* MultipeerConnectionRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionRole.swift; sourceTree = "<group>"; };
+		297E5EDF2BEBA73200BF8FE2 /* MultipeerConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionManager.swift; sourceTree = "<group>"; };
+		297E5EE02BEBA73200BF8FE2 /* MutlipeerConnectionConnectionValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutlipeerConnectionConnectionValidator.swift; sourceTree = "<group>"; };
+		297E5EE62BEBA77300BF8FE2 /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		297E5EE82BEBA78900BF8FE2 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		297E5EEA2BEBA89700BF8FE2 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		297E5EED2BEBA96700BF8FE2 /* LogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		297E5EEF2BEBAD5800BF8FE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		297E5EF02BEC64BC00BF8FE2 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		297E5EF22BEC67AE00BF8FE2 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		297E5EF42BEE612C00BF8FE2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		297E5EFA2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftplaygroundMultipeerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		297E5EFC2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftplaygroundMultipeerTests.swift; sourceTree = "<group>"; };
+		297E5F042BEE7FC500BF8FE2 /* MultipeerConnectionDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionDelegateMock.swift; sourceTree = "<group>"; };
+		297E5F082BEE81E700BF8FE2 /* MultipeerConnectionAckableDelegate_ActualSend_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionAckableDelegate_ActualSend_Test.swift; sourceTree = "<group>"; };
+		297E5F132BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionAckableDelegate.swift; sourceTree = "<group>"; };
+		297E5F162BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionSplitableDelegate.swift; sourceTree = "<group>"; };
+		297E5F192BF0D9C200BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionSplitableDelegateOld.swift; sourceTree = "<group>"; };
+		297E5F1D2BF0E17100BF8FE2 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		297E5F1F2BF0E9BE00BF8FE2 /* LocalFileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileHandler.swift; sourceTree = "<group>"; };
+		297E5F212BF243A800BF8FE2 /* ProgressCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircularView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		297E5EC52BEBA6F700BF8FE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		297E5EF72BEE7F4700BF8FE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		297E5EBF2BEBA6F700BF8FE2 = {
+			isa = PBXGroup;
+			children = (
+				297E5ECA2BEBA6F700BF8FE2 /* SwiftplaygroundMultipeer */,
+				297E5EFB2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests */,
+				297E5EC92BEBA6F700BF8FE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		297E5EC92BEBA6F700BF8FE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				297E5EC82BEBA6F700BF8FE2 /* SwiftplaygroundMultipeer.app */,
+				297E5EFA2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		297E5ECA2BEBA6F700BF8FE2 /* SwiftplaygroundMultipeer */ = {
+			isa = PBXGroup;
+			children = (
+				297E5EEF2BEBAD5800BF8FE2 /* Info.plist */,
+				297E5EEC2BEBA95600BF8FE2 /* Views */,
+				297E5EDA2BEBA72200BF8FE2 /* Utilities */,
+				297E5ECB2BEBA6F700BF8FE2 /* SwiftplaygroundMultipeerApp.swift */,
+				297E5ECF2BEBA6FA00BF8FE2 /* Assets.xcassets */,
+				297E5ED12BEBA6FA00BF8FE2 /* SwiftplaygroundMultipeer.entitlements */,
+				297E5ED22BEBA6FA00BF8FE2 /* Preview Content */,
+			);
+			path = SwiftplaygroundMultipeer;
+			sourceTree = "<group>";
+		};
+		297E5ED22BEBA6FA00BF8FE2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				297E5ED32BEBA6FA00BF8FE2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		297E5EDA2BEBA72200BF8FE2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				297E5EE82BEBA78900BF8FE2 /* String+Extension.swift */,
+				297E5EF02BEC64BC00BF8FE2 /* Image+Extension.swift */,
+				297E5EF22BEC67AE00BF8FE2 /* Data+Extension.swift */,
+				297E5EE62BEBA77300BF8FE2 /* LogManager.swift */,
+				297E5F1F2BF0E9BE00BF8FE2 /* LocalFileHandler.swift */,
+				297E5EDB2BEBA73200BF8FE2 /* Multipeer */,
+				297E5F1D2BF0E17100BF8FE2 /* URL+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		297E5EDB2BEBA73200BF8FE2 /* Multipeer */ = {
+			isa = PBXGroup;
+			children = (
+				297E5F122BEFAA6F00BF8FE2 /* MultipeerConnectionDelegate */,
+				297E5EDF2BEBA73200BF8FE2 /* MultipeerConnectionManager.swift */,
+				297E5EDC2BEBA73200BF8FE2 /* MultipeerConnectionDataTransformer.swift */,
+				297E5EDE2BEBA73200BF8FE2 /* MultipeerConnectionRole.swift */,
+				297E5EE02BEBA73200BF8FE2 /* MutlipeerConnectionConnectionValidator.swift */,
+			);
+			path = Multipeer;
+			sourceTree = "<group>";
+		};
+		297E5EEC2BEBA95600BF8FE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				297E5EED2BEBA96700BF8FE2 /* LogView.swift */,
+				297E5EEA2BEBA89700BF8FE2 /* ContentViewController.swift */,
+				297E5ECD2BEBA6F700BF8FE2 /* ContentView.swift */,
+				297E5EF42BEE612C00BF8FE2 /* SettingsView.swift */,
+				297E5F212BF243A800BF8FE2 /* ProgressCircularView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		297E5EFB2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests */ = {
+			isa = PBXGroup;
+			children = (
+				297E5F072BEE81BE00BF8FE2 /* Tests */,
+				297E5F032BEE7F7D00BF8FE2 /* Mocks */,
+				297E5EFC2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests.swift */,
+			);
+			path = SwiftplaygroundMultipeerTests;
+			sourceTree = "<group>";
+		};
+		297E5F032BEE7F7D00BF8FE2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				297E5F042BEE7FC500BF8FE2 /* MultipeerConnectionDelegateMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		297E5F072BEE81BE00BF8FE2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				297E5F112BEF3F0400BF8FE2 /* MultipeerConnectionAckableDelegate */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		297E5F112BEF3F0400BF8FE2 /* MultipeerConnectionAckableDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				297E5F082BEE81E700BF8FE2 /* MultipeerConnectionAckableDelegate_ActualSend_Test.swift */,
+			);
+			path = MultipeerConnectionAckableDelegate;
+			sourceTree = "<group>";
+		};
+		297E5F122BEFAA6F00BF8FE2 /* MultipeerConnectionDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				297E5EDD2BEBA73200BF8FE2 /* MultipeerConnectionDelegate.swift */,
+				297E5F132BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift */,
+				297E5F162BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift */,
+				297E5F192BF0D9C200BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift */,
+			);
+			path = MultipeerConnectionDelegate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		297E5EC72BEBA6F700BF8FE2 /* SwiftplaygroundMultipeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 297E5ED72BEBA6FA00BF8FE2 /* Build configuration list for PBXNativeTarget "SwiftplaygroundMultipeer" */;
+			buildPhases = (
+				297E5EC42BEBA6F700BF8FE2 /* Sources */,
+				297E5EC52BEBA6F700BF8FE2 /* Frameworks */,
+				297E5EC62BEBA6F700BF8FE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftplaygroundMultipeer;
+			productName = SwiftplaygroundMultipeer;
+			productReference = 297E5EC82BEBA6F700BF8FE2 /* SwiftplaygroundMultipeer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		297E5EF92BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 297E5F002BEE7F4800BF8FE2 /* Build configuration list for PBXNativeTarget "SwiftplaygroundMultipeerTests" */;
+			buildPhases = (
+				297E5EF62BEE7F4700BF8FE2 /* Sources */,
+				297E5EF72BEE7F4700BF8FE2 /* Frameworks */,
+				297E5EF82BEE7F4700BF8FE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				297E5EFF2BEE7F4700BF8FE2 /* PBXTargetDependency */,
+			);
+			name = SwiftplaygroundMultipeerTests;
+			productName = SwiftplaygroundMultipeerTests;
+			productReference = 297E5EFA2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		297E5EC02BEBA6F700BF8FE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					297E5EC72BEBA6F700BF8FE2 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					297E5EF92BEE7F4700BF8FE2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 297E5EC72BEBA6F700BF8FE2;
+					};
+				};
+			};
+			buildConfigurationList = 297E5EC32BEBA6F700BF8FE2 /* Build configuration list for PBXProject "SwiftplaygroundMultipeer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 297E5EBF2BEBA6F700BF8FE2;
+			productRefGroup = 297E5EC92BEBA6F700BF8FE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				297E5EC72BEBA6F700BF8FE2 /* SwiftplaygroundMultipeer */,
+				297E5EF92BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		297E5EC62BEBA6F700BF8FE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297E5ED42BEBA6FA00BF8FE2 /* Preview Assets.xcassets in Resources */,
+				297E5ED02BEBA6FA00BF8FE2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		297E5EF82BEE7F4700BF8FE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		297E5EC42BEBA6F700BF8FE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297E5EEB2BEBA89700BF8FE2 /* ContentViewController.swift in Sources */,
+				297E5EE72BEBA77300BF8FE2 /* LogManager.swift in Sources */,
+				297E5F222BF243A900BF8FE2 /* ProgressCircularView.swift in Sources */,
+				297E5EE92BEBA78900BF8FE2 /* String+Extension.swift in Sources */,
+				297E5EE42BEBA73200BF8FE2 /* MultipeerConnectionManager.swift in Sources */,
+				297E5EE32BEBA73200BF8FE2 /* MultipeerConnectionRole.swift in Sources */,
+				297E5F1E2BF0E17100BF8FE2 /* URL+Extension.swift in Sources */,
+				297E5F142BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift in Sources */,
+				297E5ECE2BEBA6F700BF8FE2 /* ContentView.swift in Sources */,
+				297E5F172BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift in Sources */,
+				297E5EE52BEBA73200BF8FE2 /* MutlipeerConnectionConnectionValidator.swift in Sources */,
+				297E5EF52BEE612C00BF8FE2 /* SettingsView.swift in Sources */,
+				297E5ECC2BEBA6F700BF8FE2 /* SwiftplaygroundMultipeerApp.swift in Sources */,
+				297E5EE22BEBA73200BF8FE2 /* MultipeerConnectionDelegate.swift in Sources */,
+				297E5EF32BEC67AE00BF8FE2 /* Data+Extension.swift in Sources */,
+				297E5EEE2BEBA96700BF8FE2 /* LogView.swift in Sources */,
+				297E5F202BF0E9BE00BF8FE2 /* LocalFileHandler.swift in Sources */,
+				297E5EE12BEBA73200BF8FE2 /* MultipeerConnectionDataTransformer.swift in Sources */,
+				297E5EF12BEC64BC00BF8FE2 /* Image+Extension.swift in Sources */,
+				297E5F1A2BF0D9C300BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		297E5EF62BEE7F4700BF8FE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297E5F0B2BEE863000BF8FE2 /* MultipeerConnectionManager.swift in Sources */,
+				297E5F102BEE86D300BF8FE2 /* String+Extension.swift in Sources */,
+				297E5F092BEE81E700BF8FE2 /* MultipeerConnectionAckableDelegate_ActualSend_Test.swift in Sources */,
+				297E5F0A2BEE862B00BF8FE2 /* LogManager.swift in Sources */,
+				297E5F052BEE7FC500BF8FE2 /* MultipeerConnectionDelegateMock.swift in Sources */,
+				297E5F0C2BEE864000BF8FE2 /* MultipeerConnectionRole.swift in Sources */,
+				297E5F062BEE7FE800BF8FE2 /* MultipeerConnectionDelegate.swift in Sources */,
+				297E5F182BEFAAD000BF8FE2 /* MultipeerConnectionSplitableDelegate.swift in Sources */,
+				297E5F0E2BEE865400BF8FE2 /* MutlipeerConnectionConnectionValidator.swift in Sources */,
+				297E5F152BEFAAB800BF8FE2 /* MultipeerConnectionAckableDelegate.swift in Sources */,
+				297E5F0F2BEE86C900BF8FE2 /* Data+Extension.swift in Sources */,
+				297E5EFD2BEE7F4700BF8FE2 /* SwiftplaygroundMultipeerTests.swift in Sources */,
+				297E5F0D2BEE864900BF8FE2 /* MultipeerConnectionDataTransformer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		297E5EFF2BEE7F4700BF8FE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 297E5EC72BEBA6F700BF8FE2 /* SwiftplaygroundMultipeer */;
+			targetProxy = 297E5EFE2BEE7F4700BF8FE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		297E5ED52BEBA6FA00BF8FE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		297E5ED62BEBA6FA00BF8FE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		297E5ED82BEBA6FA00BF8FE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftplaygroundMultipeer/SwiftplaygroundMultipeer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftplaygroundMultipeer/Preview Content\"";
+				DEVELOPMENT_TEAM = X5Y345A45S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftplaygroundMultipeer/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "to send images and files";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pujol-Developer.SwiftplaygroundMultipeer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		297E5ED92BEBA6FA00BF8FE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftplaygroundMultipeer/SwiftplaygroundMultipeer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftplaygroundMultipeer/Preview Content\"";
+				DEVELOPMENT_TEAM = X5Y345A45S;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftplaygroundMultipeer/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "to send images and files";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pujol-Developer.SwiftplaygroundMultipeer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		297E5F012BEE7F4800BF8FE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5Y345A45S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pujol-Developer.SwiftplaygroundMultipeerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftplaygroundMultipeer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftplaygroundMultipeer";
+			};
+			name = Debug;
+		};
+		297E5F022BEE7F4800BF8FE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X5Y345A45S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Pujol-Developer.SwiftplaygroundMultipeerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftplaygroundMultipeer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftplaygroundMultipeer";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		297E5EC32BEBA6F700BF8FE2 /* Build configuration list for PBXProject "SwiftplaygroundMultipeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				297E5ED52BEBA6FA00BF8FE2 /* Debug */,
+				297E5ED62BEBA6FA00BF8FE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		297E5ED72BEBA6FA00BF8FE2 /* Build configuration list for PBXNativeTarget "SwiftplaygroundMultipeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				297E5ED82BEBA6FA00BF8FE2 /* Debug */,
+				297E5ED92BEBA6FA00BF8FE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		297E5F002BEE7F4800BF8FE2 /* Build configuration list for PBXNativeTarget "SwiftplaygroundMultipeerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				297E5F012BEE7F4800BF8FE2 /* Debug */,
+				297E5F022BEE7F4800BF8FE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 297E5EC02BEBA6F700BF8FE2 /* Project object */;
+}
