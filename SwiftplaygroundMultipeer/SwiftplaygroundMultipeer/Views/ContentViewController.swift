@@ -42,13 +42,13 @@ class ContentViewController: ObservableObject {
     func getDelegate() -> MultipeerConnectionDelegate {
         switch delegateType {
         case .Ackable: MultipeerConnectionAckableDelegate(underlyingDelegate: self)
-        //case .Splitable: MultipeerConnectionSplitableDelegate(underlyingDelegate: self)
+        case .Discardable: MultipeerConnectionDiscardableDelegate(underlyingDelegate: self)
         default: self
         }
     }
     
     func startSession() {
-        MultipeerConnectionManager.shared.host();
+        MultipeerConnectionManager.shared.host(startPing: usePing)
     }
     
     func joinSession() {
@@ -64,21 +64,15 @@ class ContentViewController: ObservableObject {
     }
     
     @MainActor func sendImage(_ imageName: String) {
-/*
-        if let imageData = Image(imageName).getData() {
-            MultipeerConnectionManager.shared.delegate?.sendData(imageData, to: nil)
-        }
- */
         let image = Image(imageName)
         
         if useUrl {
             if let url = image.createLocalTempUrl() {
-                let del = MultipeerConnectionManager.shared.delegate
-                del?.send(to: MultipeerConnectionManager.shared.peers.first, url)
+                MultipeerConnectionManager.shared.delegate?.send(to: MultipeerConnectionManager.shared.peers.first, url, withName: imageName, withOption: "Image")
             }
         } else {
             if let imageData = image.getData() {
-                MultipeerConnectionManager.shared.delegate?.send(to: MultipeerConnectionManager.shared.peers.first, imageData)
+                MultipeerConnectionManager.shared.delegate?.send(to: MultipeerConnectionManager.shared.peers.first, imageData, withName: imageName, withOption: "Image")
             }
         }
         change(sent: image.getUIImage())
@@ -102,8 +96,8 @@ class ContentViewController: ObservableObject {
     }
 }
 extension ContentViewController: MultipeerConnectionDelegate {
-    func send(to peerID: MCPeerID? = nil, _ message: Any) {
-        MultipeerConnectionManager.shared.send(message, to: peerID)
+    func send(to peerID: MCPeerID? = nil, _ message: Any, withName name: String?, withOption: Any?) {
+        MultipeerConnectionManager.shared.send(message, withName: name, to: peerID)
     }
     
     func receiveData(from peerID: MCPeerID, _ data: Data) {
@@ -115,13 +109,13 @@ extension ContentViewController: MultipeerConnectionDelegate {
         }
     }
     
-    func receivingUrlStart(from peerID: MCPeerID, with progress: Progress) {
-        LogManager.shared.log(self, "Start receiving URL from \(peerID.displayName)")
+    func receivingUrlStart(from peerID: MCPeerID, withName name: String, with progress: Progress) {
+        LogManager.shared.log(self, "Start receiving URL:\(name) from \(peerID.displayName)")
         self.progress = progress
     }
     
-    func receivingUrlEnd(from peerID: MCPeerID, _ url: URL) {
-        LogManager.shared.log(self, "Received URL from \(peerID.displayName)")
+    func receivingUrlEnd(from peerID: MCPeerID, withName name: String, _ url: URL) {
+        LogManager.shared.log(self, "Received URL:\(name) from \(peerID.displayName)")
         progress = nil
         if let uiImage = url.loadImage() {
             change(received: uiImage)
@@ -130,8 +124,8 @@ extension ContentViewController: MultipeerConnectionDelegate {
         }
     }
     
-    func receivingUrlCanceled(from peerID: MCPeerID) {
-        LogManager.shared.log(self, "Cancelled URL from \(peerID.displayName)")
+    func receivingUrlCanceled(from peerID: MCPeerID, withName name: String) {
+        LogManager.shared.log(self, "Cancelled URL:name from \(peerID.displayName)")
         progress = nil
     }
     

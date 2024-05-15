@@ -94,7 +94,7 @@ class MultipeerConnectionManager: NSObject, ObservableObject {
         LogManager.shared.log(self, "Disconnected")
     }
     
-    func send(_ message: Any, to peerID: MCPeerID? = nil) {
+    func send(_ message: Any, withName name: String? = nil, to peerID: MCPeerID? = nil) {
         guard let session = session
         else {
             // This means there is no one connected
@@ -112,7 +112,7 @@ class MultipeerConnectionManager: NSObject, ObservableObject {
         do {
             if let url = message as? URL {
                 logSendReceive(data: url, fromTo: peerID, sending: true)
-                session.sendResource(at: url, withName: "something", toPeer: peerID ?? session.connectedPeers.first!)
+                session.sendResource(at: url, withName: name ?? "no name", toPeer: peerID ?? session.connectedPeers.first!)
             } else if let data = transformer?.toData(message) {
                 logSendReceive(data: data, fromTo: peerID, sending: true)
                 try session.send(data, toPeers: peerID != nil ? [peerID!] : session.connectedPeers, with: .reliable)
@@ -126,11 +126,9 @@ class MultipeerConnectionManager: NSObject, ObservableObject {
     }
     
     func logSendReceive(data: Any, fromTo: MCPeerID?, sending: Bool) {
-/*
         if isPing(data) {
             return
         }
-  */
         var message = "\(sending ? "Sending" : "Receiving"): \(debugData(data))(\(data))"
         
         if let data = data as? Data {
@@ -169,6 +167,7 @@ class MultipeerConnectionManager: NSObject, ObservableObject {
         
     func startPingTimer() {
         if isHost() && pingTimer == nil {
+            LogManager.shared.log(self, "Start ping timer")
             pingTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(pingTimerCallback), userInfo: nil, repeats: true)
         }
     }
@@ -266,15 +265,15 @@ extension MultipeerConnectionManager: MCSessionDelegate {
         }
     }
     func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
-        delegate?.receivingUrlStart(from: peerID, with: progress)
+        delegate?.receivingUrlStart(from: peerID, withName: resourceName, with: progress)
     }
     
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
 
         if let url = localURL {
-            delegate?.receivingUrlEnd(from: peerID, url)
+            delegate?.receivingUrlEnd(from: peerID, withName: resourceName, url)
         } else {
-            delegate?.receivingUrlCanceled(from: peerID)
+            delegate?.receivingUrlCanceled(from: peerID, withName: resourceName)
         }
     }
     

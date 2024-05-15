@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum MultipeerConnectionDelegateType: String, Equatable, CaseIterable {
-    case Simple, Ackable, Splitable
+    case Simple, Ackable, Discardable
 }
 
 

@@ -36,12 +36,10 @@
 		297E5F102BEE86D300BF8FE2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5EE82BEBA78900BF8FE2 /* String+Extension.swift */; };
 		297E5F142BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F132BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift */; };
 		297E5F152BEFAAB800BF8FE2 /* MultipeerConnectionAckableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F132BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift */; };
-		297E5F172BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F162BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift */; };
-		297E5F182BEFAAD000BF8FE2 /* MultipeerConnectionSplitableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F162BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift */; };
-		297E5F1A2BF0D9C300BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F192BF0D9C200BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift */; };
 		297E5F1E2BF0E17100BF8FE2 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F1D2BF0E17100BF8FE2 /* URL+Extension.swift */; };
 		297E5F202BF0E9BE00BF8FE2 /* LocalFileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F1F2BF0E9BE00BF8FE2 /* LocalFileHandler.swift */; };
 		297E5F222BF243A900BF8FE2 /* ProgressCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F212BF243A800BF8FE2 /* ProgressCircularView.swift */; };
+		297E5F242BF3844500BF8FE2 /* MultipeerConnectionDiscardableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E5F232BF3844500BF8FE2 /* MultipeerConnectionDiscardableDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,11 +77,10 @@
 		297E5F042BEE7FC500BF8FE2 /* MultipeerConnectionDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionDelegateMock.swift; sourceTree = "<group>"; };
 		297E5F082BEE81E700BF8FE2 /* MultipeerConnectionAckableDelegate_ActualSend_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionAckableDelegate_ActualSend_Test.swift; sourceTree = "<group>"; };
 		297E5F132BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionAckableDelegate.swift; sourceTree = "<group>"; };
-		297E5F162BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionSplitableDelegate.swift; sourceTree = "<group>"; };
-		297E5F192BF0D9C200BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionSplitableDelegateOld.swift; sourceTree = "<group>"; };
 		297E5F1D2BF0E17100BF8FE2 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		297E5F1F2BF0E9BE00BF8FE2 /* LocalFileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileHandler.swift; sourceTree = "<group>"; };
 		297E5F212BF243A800BF8FE2 /* ProgressCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircularView.swift; sourceTree = "<group>"; };
+		297E5F232BF3844500BF8FE2 /* MultipeerConnectionDiscardableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConnectionDiscardableDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,8 +218,7 @@
 			children = (
 				297E5EDD2BEBA73200BF8FE2 /* MultipeerConnectionDelegate.swift */,
 				297E5F132BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift */,
-				297E5F162BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift */,
-				297E5F192BF0D9C200BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift */,
+				297E5F232BF3844500BF8FE2 /* MultipeerConnectionDiscardableDelegate.swift */,
 			);
 			path = MultipeerConnectionDelegate;
 			sourceTree = "<group>";
@@ -336,17 +332,16 @@
 				297E5F1E2BF0E17100BF8FE2 /* URL+Extension.swift in Sources */,
 				297E5F142BEFAA9100BF8FE2 /* MultipeerConnectionAckableDelegate.swift in Sources */,
 				297E5ECE2BEBA6F700BF8FE2 /* ContentView.swift in Sources */,
-				297E5F172BEFAACB00BF8FE2 /* MultipeerConnectionSplitableDelegate.swift in Sources */,
 				297E5EE52BEBA73200BF8FE2 /* MutlipeerConnectionConnectionValidator.swift in Sources */,
 				297E5EF52BEE612C00BF8FE2 /* SettingsView.swift in Sources */,
 				297E5ECC2BEBA6F700BF8FE2 /* SwiftplaygroundMultipeerApp.swift in Sources */,
 				297E5EE22BEBA73200BF8FE2 /* MultipeerConnectionDelegate.swift in Sources */,
 				297E5EF32BEC67AE00BF8FE2 /* Data+Extension.swift in Sources */,
+				297E5F242BF3844500BF8FE2 /* MultipeerConnectionDiscardableDelegate.swift in Sources */,
 				297E5EEE2BEBA96700BF8FE2 /* LogView.swift in Sources */,
 				297E5F202BF0E9BE00BF8FE2 /* LocalFileHandler.swift in Sources */,
 				297E5EE12BEBA73200BF8FE2 /* MultipeerConnectionDataTransformer.swift in Sources */,
 				297E5EF12BEC64BC00BF8FE2 /* Image+Extension.swift in Sources */,
-				297E5F1A2BF0D9C300BF8FE2 /* MultipeerConnectionSplitableDelegateOld.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +356,6 @@
 				297E5F052BEE7FC500BF8FE2 /* MultipeerConnectionDelegateMock.swift in Sources */,
 				297E5F0C2BEE864000BF8FE2 /* MultipeerConnectionRole.swift in Sources */,
 				297E5F062BEE7FE800BF8FE2 /* MultipeerConnectionDelegate.swift in Sources */,
-				297E5F182BEFAAD000BF8FE2 /* MultipeerConnectionSplitableDelegate.swift in Sources */,
 				297E5F0E2BEE865400BF8FE2 /* MutlipeerConnectionConnectionValidator.swift in Sources */,
 				297E5F152BEFAAB800BF8FE2 /* MultipeerConnectionAckableDelegate.swift in Sources */,
 				297E5F0F2BEE86C900BF8FE2 /* Data+Extension.swift in Sources */,

@@ -21,6 +21,8 @@ struct ContentView: View {
             Divider()
             connectionStatusView()
             Divider()
+            controllerInfoView()
+            Divider()
             buttonView()
             Divider()
             receivedImageView()
@@ -56,6 +58,21 @@ struct ContentView: View {
     
     func connectionStatusView() -> some View {
         Text(getConnectionStatus())
+    }
+    
+    func controllerInfoView() -> some View {
+        HStack {
+            Text(controller.delegateType.rawValue)
+/*
+            if let delegate = MultipeerConnectionManager.shared.delegate {
+                Text(String(describing: delegate).extractLoggerName())
+            } else {
+                Text("no delegate")
+            }
+ */
+            Text(controller.usePing ? "(P)" : "")
+        }
+
     }
     
     func buttonView() -> some View {
